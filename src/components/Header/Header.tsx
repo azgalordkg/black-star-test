@@ -1,19 +1,17 @@
 import React from 'react'
-import { AppBar, Box, Toolbar, Typography } from '@material-ui/core'
-import styles from './Header.styles'
+import { Box, Toolbar } from '@mui/material'
+import { StyledHeader, StyledTitle } from './Header.styles'
+import LightModeIcon from '@mui/icons-material/LightMode'
 
 export const Header = () => {
-  const classes = styles()
-
   return (
     <Box>
-      <AppBar className={classes.header} position="static">
-        <Toolbar className={classes.headerContent}>
-          <Typography variant="h6" component="div">
-            Weather Application
-          </Typography>
+      <StyledHeader position="static">
+        <Toolbar>
+          <LightModeIcon />
+          <StyledTitle variant="h6">Weather Application</StyledTitle>
         </Toolbar>
-      </AppBar>
+      </StyledHeader>
     </Box>
   )
 }

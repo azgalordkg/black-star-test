@@ -1,18 +1,11 @@
-import { makeStyles } from '@material-ui/core/styles'
+import { AppBar, Typography } from '@mui/material'
+import styled from '@emotion/styled'
 
-export default makeStyles(
-  () => ({
-    header: {
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      padding: '0',
-      backgroundColor: '#7474ff',
-    },
-    headerContent: {
-      display: 'flex',
-      justifyContent: 'space-between',
-    },
-  }),
-  { name: 'Header' }
-)
+export const StyledHeader = styled(AppBar)`
+  padding: 0;
+  background: #000000;
+`
+
+export const StyledTitle = styled(Typography)`
+  margin-left: 12px;
+`
